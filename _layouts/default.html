@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include navigation-refills.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer-refills.html %}
+    <script type="text/javascript" src="{% asset_path application.js %}"></script>
+  </body>
+
+</html>
