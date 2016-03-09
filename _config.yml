@@ -5,10 +5,19 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 # Plugins
-gems: [bourbon, neat]
+gems:
+  - jekyll-sitemap
+  - jekyll-assets
+  - bourbon
+  - neat
 
 assets:
-  cachebust: soft
+  prefix: "/assets"
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+# assets:
+#   cachebust: soft
 
 # Site settings
 title: Iraquitan Portfolio

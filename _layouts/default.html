@@ -13,7 +13,8 @@
     </div>
 
     {% include footer-refills.html %}
-    <script type="text/javascript" src="{% asset_path application.js %}"></script>
+
+    <script type="text/javascript" src="{{ /assets/javascripts/application.js | prepend: site.baseurl }}"></script>
   </body>
 
 </html>
