@@ -1,15 +1,16 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="{{ site.baseurl }}/" class="logo">
+    <a href="javascript:void(0)" class="logo">
+    <!-- <a href="{{ site.baseurl }}/" class="logo"> -->
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
     </a>
-    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-navicon"></i></a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></li>
+        <li class="nav-link"><a href="{{ site.baseurl }}/">{{ site.title }}</a></li>
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <li class="nav-link"><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+          <li class="nav-link"><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
           {% endif %}
         {% endfor %}
         <!-- <li class="nav-link"><a href="javascript:void(0)">Products</a></li>

@@ -33,6 +33,8 @@ $inverted: 1;
 
 $base-background-color: $light-gray;
 
+// Refills includes
+@import "animate-refills";
 @import "texture-refills";
 @import "navigation-refills";
 @import "grid-refills";
@@ -46,8 +48,9 @@ div.page-content {
   padding: 20px 0 20px 0;
 
   img.avatar {
+    padding: 0.7em;
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 5px solid $light-gray;
     width: 50%;
   }
 }

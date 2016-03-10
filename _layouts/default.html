@@ -14,7 +14,8 @@
 
     {% include footer-refills.html %}
 
-    <script type="text/javascript" src="{% asset_path application.js %}"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    {% javascript application.js type="text/javascript" %}
   </body>
 
 </html>

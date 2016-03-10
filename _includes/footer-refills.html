@@ -5,36 +5,22 @@
   <div class="footer-links">
     <ul>
       <li><h3>Content</h3></li>
-      <li class="page-link"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></li>
+      <!-- <li class="page-link"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></li> -->
+      <li class="page-link"><a class="site-title" href="{{ site.baseurl }}/">Home</a></li>
       {% for my_page in site.pages %}
         {% if my_page.title %}
         <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
         {% endif %}
       {% endfor %}
-      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      <li><a href="mailto:{{ site.email }}"><i class="fa fa-send"></i> {{ site.email }}</a></li>
     </ul>
     <ul>
       <li><h3>Follow Me</h3></li>
-      {% if site.github_username %}
-      <li>
-        {% include a-icon-social.html base-url='github.com/' username=site.github_username fa-icon='github-alt' %}
-      </li>
-      {% endif %}
-      {% if site.twitter_username %}
-      <li>
-        {% include a-icon-social.html base-url='twitter.com/' username=site.twitter_username fa-icon='twitter' %}
-      </li>
-      {% endif %}
-      {% if site.facebook_username %}
-      <li>
-        {% include a-icon-social.html base-url='facebook.com/' username=site.facebook_username fa-icon='facebook' %}
-      </li>
-      {% endif %}
-      {% if site.codepen_username %}
-      <li>
-        {% include a-icon-social.html base-url='codepen.io/' username=site.codepen_username fa-icon='codepen' %}
-      </li>
-      {% endif %}
+      {% for profile in site.social-profiles %}
+        <li>
+          {% include a-icon-social.html base-url=profile.base-url username=profile.username fa-icon=profile.fa-icon %}
+        </li>
+      {% endfor %}
     </ul>
     <ul>
       <li><h3>Legal</h3></li>
