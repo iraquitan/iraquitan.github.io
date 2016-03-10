@@ -10,14 +10,14 @@ gems:
   - jekyll-assets
   - bourbon
   - neat
+  - sass
 
 assets:
   prefix: "/assets"
   sources:
+    - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
-# assets:
-#   cachebust: soft
 
 # Site settings
 title: Iraquitan Portfolio
@@ -27,7 +27,7 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://iraquitan.github.io/" # the base hostname & protocol for your site
 
 # Social profiles
 twitter_username: iraquitan_filho
