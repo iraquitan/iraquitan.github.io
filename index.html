@@ -3,11 +3,17 @@ layout: default
 ---
 
 <div class="home">
+  <div class="stats">
+    <ul>
+      <li>{{ site.posts | size }}<span>Posts</span></li>
+      <li>{{ site.projects | size }}<span>Projects</span></li>
+    </ul>
+  </div>
 
   <h1>Recent Posts</h1>
 
   <div class="grid-items">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:5 %}
       {% if post.image %}
         <a href="{{ post.url | prepend: site.baseurl }}" class="grid-item grid-item-big grid-item-image">
         <img src="{{ post.image }}" alt="">
@@ -17,7 +23,23 @@ layout: default
       {% endif %}
       <h1>{{ post.title }}</h1>
       <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      <!-- {{ post.excerpt }} -->
+      </a>
+    {% endfor %}
+  </div>
+
+  <h1>Recent Projects</h1>
+
+  <div class="flex-boxes">
+    {% for project in site.projects limit:5 %}
+      {% if project.image %}
+        <a href="{{ project.url | prepend: site.baseurl }}" class="flex-box flex-box-big grid-item-image">
+        <img src="{{ project.image }}" alt="">
+      {% else %}
+        <a href="{{ project.url | prepend: site.baseurl }}" class="grid-item">
+        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="">
+      {% endif %}
+      <h1 class="flex-title">{{ project.title }}</h1>
+      {{ project.excerpt }}
       </a>
     {% endfor %}
   </div>

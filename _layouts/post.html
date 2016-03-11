@@ -3,8 +3,8 @@ layout: default
 ---
 <article class="type-system-geometric">
   {% for category in page.categories %}
-    <!-- <p class="type">{{ category }}</p> -->
-    <span class="badge">{{ category }}</span>
+    <p class="type">{{ category }}</p>
+    <!-- <span class="badge">{{ category }}</span> -->
   {% endfor %}
   <h1>{{ page.title }}</h1>
   <p class="date"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>

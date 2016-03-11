@@ -28,7 +28,7 @@ task :publish => [:generate] do
 
     system "git init"
     system "git add ."
-    message = "chore: Site updated at #{Time.now.utc}"
+    message = "refactor: Site updated at #{Time.now.utc}"
     system "git commit -m #{message.inspect}"
     # system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
     system "git remote add origin https://github.com/#{GITHUB_REPONAME}"

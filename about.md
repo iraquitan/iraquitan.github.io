@@ -5,7 +5,10 @@ permalink: /about/
 ---
 {% image iraki-avatar.png alt='iraki-avatar' class='avatar' %}
 
-I'm a web developer Python
+I'm a Computer Science graduated at Federal University of Pará, Belém, Brazil.
+Currently working on research field, with Brain Computer Interfaces (BCI), but
+already professionalizing in web development with Udacity's Full Stack Web
+Development Nanodegree.
 
 * Skills:
   * Languages:
@@ -33,9 +36,7 @@ I'm a web developer Python
     - PyCharm
     - Slack
 
-Computer Science BS at Federal University of Pará, Belém, Brazil
-
-...you can [get the PDF]({% asset_path anonym-resume.pdf %}){:target="_blank"} <i class="fa fa-file-pdf-o"></i> directly.
+You can find my CV in PDF <i class="fa fa-file-pdf-o"></i> format [here]({% asset_path anonym-resume.pdf %}){:target="_blank"}.
 
 [iraki-github]: http://github.com/iraquitan
 [iraki-codepen]: https://codepen.io/iraquitan
