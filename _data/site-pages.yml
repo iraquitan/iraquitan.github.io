@@ -1,0 +1,9 @@
+- label-name: Blog
+  base-url: '/blog/'
+  fa-icon: 'book'
+- label-name: Projects
+  base-url: "#projects"
+  fa-icon: 'briefcase'
+- label-name: About
+  base-url: "#about"
+  fa-icon: 'user'

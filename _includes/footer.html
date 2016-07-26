@@ -1,0 +1,33 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-sm-6">
+        <h4 class="footer-title">{{ site.title }}</h4>
+        <p>{{ site.description }}</p>
+      </div>
+      <div class="col-sm-3">
+        <h4 class="footer-title">Follow Me</h4>
+        <ul class="list-unstyled">
+          {% for profile in site.data.profiles %}
+            <li>
+              {% include a-icon-social.html base-url=profile.base-url username=profile.username fa-icon=profile.fa-icon %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4 class="footer-title">Contact</h4>
+        <address>
+          <strong>{{ site.data.people.iraquitan.name }}</strong><br>
+          Belém-PA, Brazil<br>
+          <a href="mailto:{{site.email}}">{{site.email}}</a>
+        </address>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center text-muted">
+        <p><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by Iraquitan Cordeiro Filho <i class="fa fa-copyright"></i> {{ site.time | date: '%Y' }}.</p>
+      </div>
+    </div>
+  </div>
+</footer>

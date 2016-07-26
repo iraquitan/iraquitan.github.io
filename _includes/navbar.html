@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="brand-image" class="navbar-brand navbar-brand-image" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>
+        <img alt="{{ site.title }}" src="{{ site.url }}/assets/img/favicons/favicon-32x32.png">
+      </a>
+      <a id="brand-title" class="navbar-brand text-lowercase" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>{{ site.title }}</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="collapsing-navbar">
+      <div id="navbar-scrollspy">
+        <ul class="nav navbar-nav navbar-right">
+          {% for sp in site.data.site-pages %}
+            <li {% if sp.base-url == page.url %} class="active" {% endif %}>
+              {% if page.url == '/' %}
+                <a href="{{ sp.base-url }}"><i class="fa fa-{{ sp.fa-icon }}"></i> {{sp.label-name}}</a>
+              {% else %}
+                <a href="{{ sp.base-url | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-{{ sp.fa-icon }}"></i> {{ sp.label-name }} {% if sp.base-url == page.url %} <span class="sr-only">(current)</span> {% endif %}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

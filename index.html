@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<section>
+  <div class="jumbotron">
+    <h1 class="display-3">Hi, I'm Iraquitan</h1>
+    <p class="lead">I'm a full-stack web developer living in Belém and I spend my time developing and deploying web apps.</p>
+    <hr class="m-y-2">
+    <p>My main programming language is Python and web frameworks are Django, Flask and Google App Engine.</p>
+    <p class="lead">
+      <a id="about-button" class="btn btn-primary btn-lg" href="#about" role="button">Learn more</a>
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="page-heading">Blog posts</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+  </div>
+</section>
+
+<hr class="m-y-2">
+{% include projects.html %}
+<hr class="m-y-2">
+{% include about.html %}
