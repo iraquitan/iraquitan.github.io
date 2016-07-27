@@ -8,10 +8,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a id="brand-image" class="navbar-brand navbar-brand-image" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>
+      <a class="navbar-brand navbar-brand-image" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>
         <img alt="{{ site.title }}" src="{{ site.url }}/assets/img/favicons/favicon-32x32.png">
       </a>
-      <a id="brand-title" class="navbar-brand text-lowercase" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>{{ site.title }}</a>
+      <a class="navbar-brand text-lowercase" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>{{ site.title }}</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="collapsing-navbar">

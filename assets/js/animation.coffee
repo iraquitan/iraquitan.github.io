@@ -6,7 +6,7 @@ $ ->
   $("body").scrollspy({target: ".navbar", offset: 50})
   # Add smooth scrolling to all links inside a navbar and to #brand-title and
   #brand-image
-  $("#navbar-scrollspy a, #brand-title, #brand-image, #about-button").on 'click', (event) ->
+  $("#navbar-scrollspy a, .navbar-brand, #about-button").on 'click', (event) ->
     # Make sure this.hash has a value before overriding default behavior
     if $(this.hash).length  # Check if hash contains any element
       # Prevent default anchor click behavior
