@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/iraquitan/iraquitan.github.io/badges/gpa.svg)](https://codeclimate.com/github/iraquitan/iraquitan.github.io)
 # iraquitan.github.io
 My personal GitHub page built with Jekyll.
 
