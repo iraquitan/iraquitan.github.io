@@ -103,3 +103,34 @@ address {
         }
     }
 }
+/**
+ * Projects Modal
+ */
+.modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    .modal-content {
+        padding: 100px 0;
+        min-width: 100%;
+        min-height: 100%;
+        border-radius: 0;
+        border: none;
+        .modal-body {
+            padding: 15px;
+        }
+        .close {
+            z-index: 1042;
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 1em;
+        }
+        .btn-default {
+            border: none;
+        }
+        .m-y-2 {
+            border-top: 5px solid $bgHighlight;
+        }
+    }
+}
