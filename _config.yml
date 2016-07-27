@@ -19,9 +19,6 @@ url: "http://iraquitan.github.io" # the base hostname & protocol for your site
 collections:
   posts:
     permalink: /blog/:categories/:year/:month/:day/:title/
-  projects:
-    output: true
-    permalink: /projects/:path/
 
 # timezone
 timezone: America/Belem
