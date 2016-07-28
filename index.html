@@ -2,49 +2,50 @@
 layout: default
 ---
 
-<section>
-  <div class="jumbotron">
-    <h1 class="display-3">Hi, I'm Iraquitan</h1>
-    <p class="lead">I'm a full-stack web developer living in Belém and I spend my time developing and deploying web apps.</p>
-    <hr class="m-y-2">
-    <p>My main programming language is Python and web frameworks are Django, Flask and Google App Engine.</p>
-    <p class="lead">
-      <a id="about-button" class="btn btn-primary btn-lg" href="#about" role="button">Learn more</a>
-    </p>
-  </div>
+<!-- Header -->
+<header id="header">
+  <img id="logo" src="{{ "/assets/img/icf.png" | prepend: site.baseurl }}" alt="ICF logo">
+  <h1>Hi, I'm Iraquitan</h1>
+  <p class="lead">I'm a full-stack web developer living in Belém and I spend my time developing and deploying web apps.</p>
+  <p>
+    <a href="http://github.com/iraquitan" target="_blank">by {{ site.data.people.iraquitan.name }}</a>
+  </p>
+</header>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="page-heading">Blog posts</h1>
+<div class="container">
+  <section class="site-section">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="text-uppercase">Latest blog posts</h3>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <ul class="post-list">
-        {% for post in site.posts %}
-          <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-          </li>
-        {% endfor %}
-      </ul>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="post-list">
+          {% for post in site.posts limit:5 %}
+            <li>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <h3>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h3>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      </div>
     </div>
-  </div>
-</section>
+    </section>
 
-<hr class="m-y-2">
-{% include projects.html %}
-<hr class="m-y-2">
-{% include about.html %}
+  <hr class="m-y-2">
+  {% include projects.html %}
+  <hr class="m-y-2">
+  {% include about.html %}
 
-{% include projects_modal.html %}
+  {% include projects_modal.html %}
+</div>

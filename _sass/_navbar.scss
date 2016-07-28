@@ -1,7 +1,7 @@
-$bgDefault      : #eef9ff;
-$bgHighlight    : #d8eef9;
-$colDefault     : #0a4371;
-$colHighlight   : #527796;
+$bgDefault      : #ebf9f9;
+$bgHighlight    : #d6fafa;
+$colDefault     : $brand-color;
+$colHighlight   : $brand-color-dark;
 $dropDown       : true;
 .navbar-default {
   background-color: $bgDefault;
