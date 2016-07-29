@@ -15,7 +15,9 @@ strong {
 a {
     color: $brand-color;
 }
-a:active, a:focus, a:hover {
+a:active,
+a:focus,
+a:hover {
     color: $brand-color-dark;
 }
 // Code
@@ -87,7 +89,9 @@ header p.lead {
 .thumbnail img {
     min-width: 100%;
 }
-a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+a.thumbnail.active,
+a.thumbnail:focus,
+a.thumbnail:hover {
     border-color: $brand-color-dark;
 }
 // Bootstrap navbar-brand
@@ -95,4 +99,62 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     width: 32px;
     height: 32px;
     border-radius: 50%;
+}
+// Navbar-toggle hamburger menu animation
+.navbar-toggle {
+    padding: 15px 10px;
+}
+.navbar-toggle .hamb-menu {
+    border-radius: 2px;
+    display: block;
+    height: 4px;
+    width: 30px;
+    background: none;
+}
+.navbar-toggle .hamb-menu::after,
+.navbar-toggle .hamb-menu::before {
+    position: absolute;
+    border-radius: 2px;
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: $brand-color;
+    content: "";
+}
+// not collapsed state, i.e. menu open
+.navbar-toggle .hamb-menu::before {
+    transform: rotate(45deg);
+    top: 15px;
+}
+.navbar-toggle .hamb-menu::after {
+    transform: rotate(-45deg);
+    bottom: 15px;
+}
+.navbar-toggle .hamb-menu::after,
+.navbar-toggle .hamb-menu::before {
+    background-color: $brand-second-color;
+}
+// collapsed state, i.e. menu closed
+.navbar-toggle.collapsed .hamb-menu,
+.navbar-toggle.collapsed .hamb-menu::after,
+.navbar-toggle.collapsed .hamb-menu::before {
+    background-color: $brand-color;
+}
+.navbar-toggle.collapsed .hamb-menu::before {
+    top: 3px;
+    transform: rotate(0);
+}
+.navbar-toggle.collapsed .hamb-menu::after {
+    bottom: 3px;
+    transform: rotate(0);
+}
+.navbar-toggle .hamb-menu,
+.navbar-toggle .hamb-menu::after,
+.navbar-toggle .hamb-menu::before {
+    transition: bottom 0.3s 0s, top 0.3s 0s , background 0.3s 0.3s, transform 0.3s 0.3s;
+}
+.navbar-toggle.collapsed .hamb-menu,
+.navbar-toggle.collapsed .hamb-menu::after,
+.navbar-toggle.collapsed .hamb-menu::before {
+    transition: transform 0.3s 0s, background 0.3s 0s, bottom 0.3s 0.3s, top 0.3s 0.3s;
 }
