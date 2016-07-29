@@ -40,24 +40,14 @@ header {
     line-height: 1.2;
     padding: 10vw 2em;
     text-align: center;
-}
-@media(max-width:767px) {
-    header {
-        background-image: url("/assets/img/header-xs.jpg");
-    }
-}
-@media(min-width:768px) {
-    header {
+    background-image: url("/assets/img/header-xs.jpg");
+    @include media-query($screen-sm-min) {
         background-image: url("/assets/img/header-sm.jpg");
     }
-}
-@media(min-width:992px) {
-    header {
+    @include media-query($screen-md-min) {
         background-image: url("/assets/img/header-md.jpg");
     }
-}
-@media(min-width:1200px) {
-    header {
+    @include media-query($screen-lg-min) {
         background-image: url("/assets/img/header-lg.jpg");
     }
 }

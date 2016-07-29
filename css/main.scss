@@ -25,18 +25,13 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$screen-xs-max:     767px;  /* Extra small devices (phones, less than 768px) */
+$screen-sm-min:     768px;  /* Small devices (tablets, 768px and up) */
+$screen-md-min:     992px;  /* Medium devices (desktops, 992px and up) */
+$screen-lg-min:     1200px; /* Large devices (large desktops, 1200px and up) */
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
+@mixin media-query($screen-device-min) {
+    @media (min-width: $screen-device-min) {
         @content;
     }
 }
