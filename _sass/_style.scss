@@ -34,13 +34,32 @@ pre {
 // Header
 header {
     background-color: #263d36;
-    background-image: url("/assets/img/header.jpeg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.2;
     padding: 10vw 2em;
     text-align: center;
+}
+@media(max-width:767px) {
+    header {
+        background-image: url("/assets/img/header-xs.jpg");
+    }
+}
+@media(min-width:768px) {
+    header {
+        background-image: url("/assets/img/header-sm.jpg");
+    }
+}
+@media(min-width:992px) {
+    header {
+        background-image: url("/assets/img/header-md.jpg");
+    }
+}
+@media(min-width:1200px) {
+    header {
+        background-image: url("/assets/img/header-lg.jpg");
+    }
 }
 header img {
     display: inline-block;
