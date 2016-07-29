@@ -22,3 +22,12 @@ $ ->
         ->
           # Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash
+  # Check if site page is not on top to remove .transp class (for page reloads)
+  if $(document).scrollTop() != 0
+    $('nav').removeClass('transp')
+  # Dynamic add or remove .transp class on scroll
+  $(window).on 'scroll', ->
+    if $(document).scrollTop() > 50
+      $('nav').removeClass('transp')
+    else
+      $('nav').addClass('transp')

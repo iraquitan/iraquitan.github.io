@@ -8,7 +8,6 @@
 }
 .site-content {
     flex: 1;
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 .site-section {
@@ -17,11 +16,33 @@
 /**
  * Navbar
  */
-.navbar {
-    border-bottom: 2px solid $bgHighlight;
-}
 .navbar-brand-image {
     padding: 10px;
+}
+nav.navbar {
+    border-bottom: 2px solid $bgHighlight;
+    // Animation
+    transition: border 0.6s ease;
+    transition: all 0.6s ease;
+    li.active a {
+        transition: border 0.6s ease;
+        transition: all 0.6s ease;
+    }
+}
+nav.transp {
+    background-color: transparent;
+    border: 0;
+    @include media-query($screen-sm-min) {
+        li.active a {
+            border-radius: 0 0 50% 50%;
+        }
+    }
+}
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    border: 0;
+    background-color: transparent;
 }
 /**
  * Footer
@@ -109,7 +130,7 @@
         min-width: 100%;
         min-height: 100%;
         border-radius: 0;
-        border: none;
+        border: 0;
         .modal-body {
             padding: 15px;
         }
@@ -121,7 +142,7 @@
             padding: 1em;
         }
         .btn-default {
-            border: none;
+            border: 0;
         }
         .m-y-2 {
             border-top: 5px solid $bgHighlight;
