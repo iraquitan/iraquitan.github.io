@@ -3,6 +3,8 @@
 ---
 @charset "utf-8";
 
+@import "utils";
+
 // Our variables
 $base-font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 $base-font-size:   16px;
@@ -15,27 +17,29 @@ $spacing-unit:     30px;
 // Colors
 $text-color:            #566b78;
 $text-important-color:  #26343c;
+$text-color-light:      lighten($text-color, 40%);
+$text-color-dark:       darken($text-color, 25%);
 $background-color:      #fdfdfd;
-$brand-color:           #5fb3b3;
-$brand-color-dark:      #3d7575;
-$brand-second-color:    #f66944;
-$grey-color:            #828282;
-$grey-color-light:      lighten($grey-color, 40%);
-$grey-color-dark:       darken($grey-color, 25%);
+// Pallet colors
+$pallet-color-1:         #f98866; // (petal)
+$pallet-color-2:         #ff420e; // (poppy)
+$pallet-color-3:         #80bd9e; // (stem)
+$pallet-color-4:         #89da59; // (spring-green)
+// Base and Alternative colors
+$base-color:             $pallet-color-3;
+$alt-color:              $pallet-color-2;
+// Shades and tints
+$percentage: 20%;
+$base-color-tint: tint($base-color, $percentage);
+$base-color-shade: shade($base-color, $percentage);
+$alt-color-tint: tint($alt-color, $percentage);
+$alt-color-shade: shade($alt-color, $percentage);
 
-// Width of the content area
-$content-width:    800px;
-
+// Bootstrap 3 screen sizes
 $screen-xs-max:     767px;  /* Extra small devices (phones, less than 768px) */
 $screen-sm-min:     768px;  /* Small devices (tablets, 768px and up) */
 $screen-md-min:     992px;  /* Medium devices (desktops, 992px and up) */
 $screen-lg-min:     1200px; /* Large devices (large desktops, 1200px and up) */
-
-@mixin media-query($screen-device-min) {
-    @media (min-width: $screen-device-min) {
-        @content;
-    }
-}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

@@ -13,12 +13,10 @@ strong {
     color: $text-important-color;
 }
 a {
-    color: $brand-color;
-}
-a:active,
-a:focus,
-a:hover {
-    color: $brand-color-dark;
+    color: $base-color;
+    &:active, &:focus, &:hover {
+        color: $alt-color;
+    }
 }
 // Code
 code {
@@ -31,7 +29,7 @@ pre {
 }
 pre {
     padding: 1em;
-    border-left: 2px solid #69c;
+    border-left: 2px solid $alt-color-tint;
 }
 // Header
 header {
@@ -54,11 +52,16 @@ header {
     }
 }
 header img {
+    background-color: $base-color;
     display: inline-block;
     height: 120px;
     vertical-align: top;
     width: 120px;
     border-radius: 50%;
+    transition: background-color 0.6s ease;
+    &:hover {
+        background-color: $alt-color;
+    }
 }
 header h1 {
     color: white;
@@ -66,7 +69,7 @@ header h1 {
     font-weight: 300;
 }
 header a {
-    border: 1px solid $brand-color;
+    border: 1px solid $base-color;
     border-radius: 290486px;
     color: white;
     font-size: 0.6em;
@@ -78,7 +81,7 @@ header a {
     transition-property: color, background;
 }
 header a:hover {
-    background: $brand-color;
+    background: $base-color;
     color: white;
 }
 header p.lead {
@@ -86,19 +89,24 @@ header p.lead {
     font-weight: 100;
 }
 // Bootstrap thumbnail
-.thumbnail img {
+a.thumbnail img {
     min-width: 100%;
 }
 a.thumbnail.active,
 a.thumbnail:focus,
 a.thumbnail:hover {
-    border-color: $brand-color-dark;
+    border-color: $base-color-shade;
 }
 // Bootstrap navbar-brand
 .navbar-brand-image img {
+    background-color: $base-color;
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    transition: background-color 0.6s ease;
+    &:hover {
+        background-color: $alt-color;
+    }
 }
 // Navbar-toggle hamburger menu animation
 .navbar-toggle {
@@ -118,7 +126,7 @@ a.thumbnail:hover {
     display: block;
     width: 30px;
     height: 4px;
-    background-color: $brand-color;
+    background-color: $base-color;
     content: "";
 }
 // not collapsed state, i.e. menu open
@@ -132,13 +140,13 @@ a.thumbnail:hover {
 }
 .navbar-toggle .hamb-menu::after,
 .navbar-toggle .hamb-menu::before {
-    background-color: $brand-second-color;
+    background-color: $alt-color;
 }
 // collapsed state, i.e. menu closed
 .navbar-toggle.collapsed .hamb-menu,
 .navbar-toggle.collapsed .hamb-menu::after,
 .navbar-toggle.collapsed .hamb-menu::before {
-    background-color: $brand-color;
+    background-color: $base-color;
 }
 .navbar-toggle.collapsed .hamb-menu::before {
     top: 3px;
