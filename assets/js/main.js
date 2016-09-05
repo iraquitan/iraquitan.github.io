@@ -7,7 +7,7 @@ for (var i = 0; i < scrollLinks.length; i++) {
     var obj = scrollLinks[i];
     obj.addEventListener("click", function (event) {
         var hashElem = document.querySelectorAll(this.hash);
-        if (hashElem.length) {
+        if (hashElem.length > 0) {
             event.preventDefault();
             clearInterval(scrollTimer);
             scrollTo(document.body, hashElem[0].offsetTop, 1250);
