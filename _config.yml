@@ -21,7 +21,7 @@ collections:
     permalink: /blog/:categories/:year/:month/:day/:title/
 
 # exclude
-exclude: [assets]
+exclude: [assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json]
 
 # timezone
 timezone: America/Belem
