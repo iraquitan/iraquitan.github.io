@@ -1,14 +1,89 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<!-- Header -->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Iraquitan</title>
+  <meta name="description" content="Computer Science BS by Federal University of Pará, Belém, Brazil. Full Stack Web Development Nanodegree by Udacity. Currently working on research field, with Brain Computer Interfaces (BCI).
+">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png?v=kPgP0Nk3lR">
+  <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-32x32.png?v=kPgP0Nk3lR" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-16x16.png?v=kPgP0Nk3lR" sizes="16x16">
+  <link rel="manifest" href="/assets/img/favicons/manifest.json?v=kPgP0Nk3lR">
+  <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg?v=kPgP0Nk3lR" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico?v=kPgP0Nk3lR">
+  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml?v=kPgP0Nk3lR">
+  <meta name="theme-color" content="#ffffff">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- fontawesome -->
+  <script src="https://use.fontawesome.com/c186f0cfef.js"></script>
+  <!-- site google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+  <!-- site contents -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="http://iraquitan.github.io/">
+  <link rel="alternate" type="application/rss+xml" title="Iraquitan" href="http://iraquitan.github.io/feed.xml">
+</head>
+
+
+  <body id="home" class="site" data-spy="scroll" data-target="#navbar-scrollspy">
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top transp" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamb-menu"></span>
+      </button>
+      <a class="navbar-brand navbar-brand-image" href="http://iraquitan.github.io#home">
+        <img alt="Iraquitan" src="/assets/img/icf.png">
+      </a>
+      <a class="navbar-brand text-lowercase" href="http://iraquitan.github.io#home">Iraquitan</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="collapsing-navbar">
+      <div id="navbar-scrollspy">
+        <ul class="nav navbar-nav navbar-right">
+          
+            <li >
+              
+                <a href="/blog/"><i class="fa fa-book"></i> Blog</a>
+              
+            </li>
+          
+            <li >
+              
+                <a href="#projects"><i class="fa fa-briefcase"></i> Projects</a>
+              
+            </li>
+          
+            <li >
+              
+                <a href="#about"><i class="fa fa-user"></i> About</a>
+              
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="site-content">
+        <!-- Header -->
 <header id="header">
-  <img id="logo" src="{{ "/assets/img/icf.png" | prepend: site.baseurl }}" alt="ICF logo">
+  <img id="logo" src="/assets/img/icf.png" alt="ICF logo">
   <h1>Hi, I'm Iraquitan</h1>
   <p class="lead">I'm a full-stack web developer living in Belém and I spend my time developing and deploying web apps.</p>
   <p>
-    <a href="http://github.com/iraquitan" target="_blank">by {{ site.data.people.iraquitan.name }}</a>
+    <a href="http://github.com/iraquitan" target="_blank">by Iraquitan Cordeiro Filho</a>
   </p>
 </header>
 
@@ -23,29 +98,183 @@ layout: default
     <div class="row">
       <div class="col-md-12">
         <ul class="post-list">
-          {% for post in site.posts limit:5 %}
+          
             <li>
-              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <span class="post-meta">Jul 21, 2016</span>
               <h3>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <a class="post-link" href="/blog/jekyll/update/2016/07/21/welcome-to-jekyll/">Welcome to Jekyll!</a>
               </h3>
             </li>
-          {% endfor %}
+          
         </ul>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-12">
-        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
       </div>
     </div>
     </section>
 
   <hr class="m-y-2">
-  {% include projects.html %}
-  <hr class="m-y-2">
-  {% include about.html %}
+  <section id="projects" class="site-section">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="text-uppercase">Projects</h3>
+    </div>
+  </div>
+  <div class="row">
+    
+      
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <a href="#myModal1" data-toggle="modal" class="thumbnail">
+              <img src="http://placehold.it/400x300" class="img-responsive" alt="Catalog App">
+              <h3>Catalog App</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+        <div class="clearfix visible-sm-block"></div>
+      
+      
+        <div class="clearfix visible-md-block"></div>
+      
+      
+        <div class="clearfix visible-lg-block"></div>
+      
+    
+  </div>
+</section>
 
-  {% include projects_modal.html %}
+  <hr class="m-y-2">
+  <section id="about" class="site-section">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="text-uppercase">More about me</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p>I’m a Research Grantee at <a href="http://www.vale.com/BRASIL/en/initiatives/innovation/itv/Pages/default.aspx" target="_blank">Vale Institute of Technology - Sustainable Development (ITV-DS)</a>, a research, technology, and innovation center regarding the Mining and Sustainable Development knowledge areas. In this role I work, mainly, in a project
+        concerning the Brain Computer Interfaces (BCI) field, developing and testing machine learning models using Python and Matlab as primary developing languages, as well as writing internal reports and articles for publishing. Our most recognised
+        work to date was a conference paper published in the XVII Symposium on Virtual Reality and Augmented Reality, at São Paulo, Brazil in may 2015.</p>
+      <p>Despite appreciating my current work, I’m really passionate about Web Development, so I started professionalizing on with Udacity’s Full Stack Web Developer Nanodegree program. From my current position I’ve gained experience in leadership, communication
+        both in english and portuguese, collaboration and creativity problem solving. As a Full Stack Web Developer I’m skilled both in Frontend and Backend programming languages, tools and frameworks such as Python, Flask, Google App Engine, PostgreSQL,
+        Bootstrap, JavaScript, jQuery (see more in Background Skills).</p>
+      <p>I have a Computer Science BS from the <a href="https://www.portal.ufpa.br/" target="_blank">Federal University of Pará</a> and a Full Stack Web Developer Nanodegree from Udacity.</p>
+      <p>I’m always interested in meeting new people, and also enjoy collaborative work, so fell free to contact me if you’d like to connect.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects Modal -->
+
+  
+  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></div>
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2 class="text-uppercase">Catalog App</h2>
+                <h3>
+                  <a href="https://github.com/iraquitan/udacity-fsnd-p3-catalog-app" target="_blank"><i class="fa fa-github"></i></a>
+                </h3>
+                
+                  <span class="label label-info text-lowercase">udacity-fsnd</span>
+                
+                  <span class="label label-info text-lowercase">python</span>
+                
+                  <span class="label label-info text-lowercase">flask</span>
+                
+                <hr class="m-y-2">
+                
+                  <p class="text-left">A project for a catalog app, where users can sign up with email and password or Google or Facebook accounts.</p>
+                
+                  <p class="text-left">Logged users can add, edit and delete categories and items. Anonymous users can only view the items and categories. Logged users can only edit and delete their own categories and items.</p>
+                
+                  <p class="text-left">There is also a Json API for all the catalog, for category items, for items and categories. Also features a sitemap.xml file with static, categories and items loc and images.</p>
+                
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-sm-6">
+        <h4 class="footer-title">Iraquitan</h4>
+        <p>Computer Science BS by Federal University of Pará, Belém, Brazil. Full Stack Web Development Nanodegree by Udacity. Currently working on research field, with Brain Computer Interfaces (BCI).
+</p>
+      </div>
+      <div class="col-sm-3">
+        <h4 class="footer-title">Follow Me</h4>
+        <ul class="list-unstyled">
+          
+            <li>
+              <a href="https://github.com/iraquitan" target="_blank"><i class="fa fa-github-alt fa-fw" aria-hidden="true"></i> iraquitan</a>
+
+            </li>
+          
+            <li>
+              <a href="https://codepen.io/iraquitan" target="_blank"><i class="fa fa-codepen fa-fw" aria-hidden="true"></i> iraquitan</a>
+
+            </li>
+          
+            <li>
+              <a href="https://twitter.com/iraquitan_filho" target="_blank"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> iraquitan_filho</a>
+
+            </li>
+          
+            <li>
+              <a href="https://linkedin.com/in/iraquitan" target="_blank"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> iraquitan</a>
+
+            </li>
+          
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h4 class="footer-title">Contact</h4>
+        <address>
+          <strong>Iraquitan Cordeiro Filho</strong><br>
+          Belém-PA, Brazil<br>
+          <a href="mailto:iraquitanfilho@gmail.com">iraquitanfilho@gmail.com</a>
+        </address>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center text-muted">
+        <p><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by Iraquitan Cordeiro Filho <i class="fa fa-copyright"></i> 2016.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- bootstrap js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- main js -->
+    <script src="/assets/js/all.js"></script>
+  </body>
+
+</html>
