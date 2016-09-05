@@ -20,6 +20,9 @@ collections:
   posts:
     permalink: /blog/:categories/:year/:month/:day/:title/
 
+# exclude
+exclude: [assets]
+
 # timezone
 timezone: America/Belem
 
