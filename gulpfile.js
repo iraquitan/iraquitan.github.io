@@ -18,7 +18,7 @@ gulp.task("default", function () {
     console.log("Gulp running...");
 });
 
-gulp.task("jekyll", ["styles", "imagemin", "javascript"], function () {
+gulp.task("jekyll", ["styles", "imagemin", "script"], function () {
     return gulp.src(process.cwd())
         .pipe(jekyll({
             bundleExec: true,              // exec jekyll w/ "bundle exec"
@@ -43,28 +43,28 @@ gulp.task("deploy", function () {
 gulp.task("styles", function () {
     gulp.src("_sass/**/*.scss")
         .pipe(sourceMaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on("error", sass.logError))
+        .pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
         .pipe(autoprefixer({
             browsers: ["last 2 versions"]
         }))
         .pipe(sourceMaps.write())
-        .pipe(gulp.dest("assets/css"));
+        .pipe(gulp.dest("_site/assets/css"));
 });
 
 gulp.task("imagemin", function () {
     gulp.src("assets/img/*")
         .pipe(imagemin({
-            progressive: true,
+            progressive: true
         }))
-        .pipe(gulp.dest("_site/assets/img"))
+        .pipe(gulp.dest("_site/assets/img"));
 });
 
-gulp.task("javascript", function () {
+gulp.task("script", function () {
     pump([
         gulp.src("assets/js/*.js"),
         sourceMaps.init(),
         uglify(),
         sourceMaps.write(),
         gulp.dest("_site/assets/js")
-    ])
+    ]);
 });
