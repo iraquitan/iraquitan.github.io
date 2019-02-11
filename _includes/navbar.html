@@ -1,31 +1,27 @@
-<nav class="navbar navbar-default navbar-fixed-top transp" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="hamb-menu"></span>
-      </button>
-      <a class="navbar-brand navbar-brand-image" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>
-        <img alt="{{ site.title }}" src="/assets/img/icf.png">
-      </a>
-      <a class="navbar-brand text-lowercase" href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>{{ site.title }}</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="collapsing-navbar">
-      <div id="navbar-scrollspy">
-        <ul class="nav navbar-nav navbar-right">
-          {% for sp in site.data.site-pages %}
-            <li {% if sp.base-url == page.url %} class="active" {% endif %}>
-              {% if page.url == '/' %}
-                <a href="{{ sp.base-url }}"><i class="fa fa-{{ sp.fa-icon }}"></i> {{sp.label-name}}</a>
-              {% else %}
-                <a href="{{ sp.base-url | prepend: site.baseurl | prepend: site.url }}"><i class="fa fa-{{ sp.fa-icon }}"></i> {{ sp.label-name }} {% if sp.base-url == page.url %} <span class="sr-only">(current)</span> {% endif %}</a>
-              {% endif %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top transp">
+    <a class="navbar-brand navbar-brand-image"
+        href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>
+        <img alt="{{ site.title }}" src="/assets/img/icf.png"></a>
+    <a class="navbar-brand text-lowercase"
+        href={% if page.url == '/' %}"{{ '#home' | prepend: site.baseurl | prepend: site.url }}"{% else %}"{{ site.url }}"{% endif %}>{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            {% for sp in site.data.site-pages %}
+            <li {% if sp.base-url == page.url %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                {% if page.url == '/' %}
+                <a class="nav-link" href="{{ sp.base-url }}"><i class="fal fa-{{ sp.fa-icon }}"></i>
+                    {{sp.label-name}}</a>
+                {% else %}
+                <a class="nav-link" href="{{ sp.base-url | prepend: site.baseurl | prepend: site.url }}"><i
+                        class="fal fa-{{ sp.fa-icon }}"></i> {{ sp.label-name }} {% if sp.base-url == page.url %}
+                    <span class="sr-only">(current)</span> {% endif %}</a>
+                {% endif %}
             </li>
-          {% endfor %}
+            {% endfor %}
         </ul>
-      </div>
     </div>
-  </div>
 </nav>
