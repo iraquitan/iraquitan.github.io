@@ -20,9 +20,9 @@ function jekyllBuild () {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
 }
 function jekyllServe () {
-  return cp.spawn('bundle', ['exec', 'jekyll', 'serve', '--quiet'], { stdio: 'inherit' })
+  return cp.spawn('bundle', ['exec', 'jekyll', 'serve', '--quiet', '--drafts'], { stdio: 'inherit' })
 }
-const jekyll = series(parallel(css, img, js), jekyllServe)
+const jekyll = series(parallel(css, img, js, vendorJs), jekyllServe)
 
 function ghp () {
   return src('_site/**/*')
@@ -63,6 +63,19 @@ function jsDist () {
     .pipe(uglify())
     .pipe(dest('assets/js'))
 }
+
+function vendorJs() {
+    return src('_assets/vendor/**/*.js', { sourcemaps: true })
+    // .pipe(concat('vendor.js'))
+    .pipe(dest('assets/vendor'))
+}
+
+function vendorJsDist () {
+    return src('_assets/vendor/**/*.js', { sourcemaps: true })
+      .pipe(concat('vendor.js'))
+      .pipe(uglify())
+      .pipe(dest('assets/js'))
+  }
 
 function lint () {
   // ESLint ignores files with "node_modules" paths.
