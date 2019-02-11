@@ -16,10 +16,10 @@
                             <p class="card-text">{{ post.excerpt }}</p>
                             <p class="card-text"><small class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</small>
                             </p>
+                            <h3>
+                                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+                            </h3>
                         </div>
-                        <!-- <h3>
-                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                        </h3> -->
                     </div>
                     {% endfor %}
                 </div>

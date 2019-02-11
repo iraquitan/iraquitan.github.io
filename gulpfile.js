@@ -20,7 +20,8 @@ function jekyllBuild () {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
 }
 function jekyllServe () {
-  return cp.spawn('bundle', ['exec', 'jekyll', 'serve', '--quiet', '--drafts'], { stdio: 'inherit' })
+//   return cp.spawn('bundle', ['exec', 'jekyll', 'serve', '--quiet', '--drafts'], { stdio: 'inherit' })
+  return cp.spawn('bundle', ['exec', 'jekyll', 'serve', '--drafts'], { stdio: 'inherit' })
 }
 const jekyll = series(parallel(css, img, js, vendorJs), jekyllServe)
 
@@ -64,18 +65,18 @@ function jsDist () {
     .pipe(dest('assets/js'))
 }
 
-function vendorJs() {
-    return src('_assets/vendor/**/*.js', { sourcemaps: true })
+function vendorJs () {
+  return src('_assets/vendor/**/*.js', { sourcemaps: true })
     // .pipe(concat('vendor.js'))
     .pipe(dest('assets/vendor'))
 }
 
 function vendorJsDist () {
-    return src('_assets/vendor/**/*.js', { sourcemaps: true })
-      .pipe(concat('vendor.js'))
-      .pipe(uglify())
-      .pipe(dest('assets/js'))
-  }
+  return src('_assets/vendor/**/*.js', { sourcemaps: true })
+    .pipe(concat('vendor.js'))
+    .pipe(uglify())
+    .pipe(dest('assets/js'))
+}
 
 function lint () {
   // ESLint ignores files with "node_modules" paths.
