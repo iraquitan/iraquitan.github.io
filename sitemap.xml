@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://iraquitan.github.io/blog/jekyll/update/2016/07/21/welcome-to-jekyll/</loc>
+<loc>http://iraquitan.github.io/posts/jekyll/update/2016/07/21/welcome-to-jekyll/</loc>
 <lastmod>2016-07-21T13:50:28-03:00</lastmod>
+</url>
+<url>
+<loc>http://iraquitan.github.io/projects/udacity-fsnd/python/flask/2019/02/12/catalog-app/</loc>
+<lastmod>2019-02-12T14:23:52-03:00</lastmod>
 </url>
 <url>
 <loc>http://iraquitan.github.io/blog/</loc>

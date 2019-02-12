@@ -19,9 +19,10 @@
   <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml?v=kPgP0Nk3lR">
   <meta name="theme-color" content="#ffffff">
   <!-- bootstrap css -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <!-- fontawesome -->
-  <script async src="https://use.fontawesome.com/c186f0cfef.js"></script>
+  
+  <script defer src="/assets/vendor/fontawesome/js/all.js"></script> <!--load all styles -->
   <!-- site google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
   <!-- site contents -->
@@ -31,91 +32,96 @@
 </head>
 
 
-  <body id="home" class="site" data-spy="scroll" data-target="#navbar-scrollspy">
+  
+  <body id="home" class="site">
     <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top transp" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="hamb-menu"></span>
-      </button>
-      <a class="navbar-brand navbar-brand-image" href="http://iraquitan.github.io">
-        <img alt="Iraquitan" src="/assets/img/icf.png">
-      </a>
-      <a class="navbar-brand text-lowercase" href="http://iraquitan.github.io">Iraquitan</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="collapsing-navbar">
-      <div id="navbar-scrollspy">
-        <ul class="nav navbar-nav navbar-right">
-          
-            <li  class="active" >
-              
-                <a href="http://iraquitan.github.io/blog/"><i class="fa fa-book"></i> Blog  <span class="sr-only">(current)</span> </a>
-              
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top transp">
+    <a class="navbar-brand navbar-brand-image"
+        href="http://iraquitan.github.io">
+        <img alt="Iraquitan" src="/assets/img/icf.png"></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            
+            <li  class="nav-item active" >
+                
+                <a class="nav-link" href="http://iraquitan.github.io/blog/"><i
+                        class="fal fa-book"></i> Blog 
+                    <span class="sr-only">(current)</span> </a>
+                
             </li>
-          
-            <li >
-              
-                <a href="http://iraquitan.github.io#projects"><i class="fa fa-briefcase"></i> Projects </a>
-              
+            
+            <li  class="nav-item" >
+                
+                <a class="nav-link" href="http://iraquitan.github.io#projects"><i
+                        class="fal fa-briefcase"></i> Projects </a>
+                
             </li>
-          
-            <li >
-              
-                <a href="http://iraquitan.github.io#about"><i class="fa fa-user"></i> About </a>
-              
+            
+            <li  class="nav-item" >
+                
+                <a class="nav-link" href="http://iraquitan.github.io#about"><i
+                        class="fal fa-user"></i> About </a>
+                
             </li>
-          
+            
         </ul>
-      </div>
     </div>
-  </div>
 </nav>
 
-
-    <div class="site-content">
+    <div class="container-fluid bootstrap-content my-auto">
         <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Blog</h1>
-  </header>
+    <header class="post-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="post-title">Blog</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <div class="post-content">
+    <div class="post-content">
+        <div class="container">
+            <section class="site-section">
     <div class="container">
-      <div class="row">
-  
-    <div class="col-sm-6 col-md-4 col-lg-3">
-      <div class="row">
-        <div class="col-sm-12">
-          <h3>Welcome to Jekyll!</h3>
-          <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.
+        <div class="row">
+            
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3>Welcome to Jekyll!</h3>
+                        <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.
 
 </p>
-          <p><small class="text-muted">Jul 21, 2016</small></p>
-          <a href="/blog/jekyll/update/2016/07/21/welcome-to-jekyll/" class="btn btn-primary">Read more</a>
+                        <p><small class="text-muted">Jul 21, 2016</small></p>
+                        <a href="/posts/jekyll/update/2016/07/21/welcome-to-jekyll/" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="clearfix visible-sm-block"></div>
+            
+            
+            <div class="clearfix visible-md-block"></div>
+            
+            
+            <div class="clearfix visible-lg-block"></div>
+            
+            
         </div>
-      </div>
-    </div>
-    
-      <div class="clearfix visible-sm-block"></div>
-    
-    
-      <div class="clearfix visible-md-block"></div>
-    
-    
-      <div class="clearfix visible-lg-block"></div>
-    
-  
-</div>
 
     </div>
-  </div>
+</section>
+        </div>
+    </div>
 
 </article>
-
     </div>
 
     <!-- Footer -->
@@ -132,22 +138,17 @@
         <ul class="list-unstyled">
           
             <li>
-              <a href="https://github.com/iraquitan" target="_blank"><i class="fa fa-github-alt fa-fw" aria-hidden="true"></i> iraquitan</a>
+              <a href="https://github.com/iraquitan" target="_blank"><i class="fab fa-github-alt fa-fw" aria-hidden="true"></i> iraquitan</a>
 
             </li>
           
             <li>
-              <a href="https://codepen.io/iraquitan" target="_blank"><i class="fa fa-codepen fa-fw" aria-hidden="true"></i> iraquitan</a>
+              <a href="https://linkedin.com/in/iraquitan" target="_blank"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i> iraquitan</a>
 
             </li>
           
             <li>
-              <a href="https://twitter.com/iraquitan_filho" target="_blank"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> iraquitan_filho</a>
-
-            </li>
-          
-            <li>
-              <a href="https://linkedin.com/in/iraquitan" target="_blank"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> iraquitan</a>
+              <a href="https://twitter.com/iraquitan_filho" target="_blank"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i> iraquitan_filho</a>
 
             </li>
           
@@ -156,7 +157,7 @@
       <div class="col-sm-3">
         <h4 class="footer-title">Contact</h4>
         <address>
-          <strong>Iraquitan Cordeiro Filho</strong><br>
+          Iraquitan Cordeiro Filho<br>
           Belém-PA, Brazil<br>
           <a href="mailto:iraquitanfilho@gmail.com">iraquitanfilho@gmail.com</a>
         </address>
@@ -164,17 +165,16 @@
     </div>
     <div class="row">
       <div class="col-xs-12 text-center text-muted">
-        <p><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by Iraquitan Cordeiro Filho <i class="fa fa-copyright"></i> 2016.</p>
+        <p><i class="fal fa-code"></i> with <i class="fas fa-heart" style="color:Tomato"></i> by Iraquitan Cordeiro Filho <i class="fal fa-copyright"></i> 2019.</p>
       </div>
     </div>
   </div>
 </footer>
 
 
-    <!-- jquery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <!-- bootstrap js CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <!-- main js -->
     <script src="/assets/js/all.js"></script>
   </body>
